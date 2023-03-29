@@ -32,4 +32,7 @@ while maintance == 'y' and maintance != 'q' :
     maintance = input("Enter 'y' to continue or 'q' to quit and view results : ")
     if maintance != 'y' or maintance != 'q' :
         print("Invalid input please enter 'y' to continue or 'q' to quit")
+        break ;
+    else:
+        continue;
     
