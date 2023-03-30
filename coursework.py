@@ -32,10 +32,10 @@ while maintance == 'y' and maintance != 'q' :
         if c_pass == 120 and c_defer == c_fail == 0:
             print("Progress")
             count_progress = count_progress + 1
-        elif c_pass == 100 and c_defer == 0 or 20 and c_fail == 0 or 20:
+        elif c_pass == 100 and c_defer in(0, 20) and c_fail in (0, 20):
             print("Progress (module trailer)")
             count_trailer = count_trailer + 1
-        elif c_pass == 0 or 20 or 40 and c_defer == 0 or 20 or 40 and c_fail == 80 or 100 or 120 :
+        elif c_pass in (0, 20, 40) and c_defer in (0, 20, 40) and c_fail in (80, 100, 120) :
             print("Exclude")
             count_excluded = count_excluded + 1
         else :
@@ -49,6 +49,6 @@ while maintance == 'y' and maintance != 'q' :
     if maintance == 'y' :
         continue;
     elif maintance == 'q' :
-        print("Histogram,\n,Progress = ",count_progress,"\nTrailer : ",count_trailer,"\nRetriever = ",count_retriever,"\nExcluded : ",count_excluded)
+        print("Histogram\nProgress = ",count_progress,"\nTrailer : ",count_trailer,"\nRetriever = ",count_retriever,"\nExcluded : ",count_excluded)
         break;
         
