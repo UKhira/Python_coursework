@@ -49,6 +49,9 @@ while maintance == 'y' and maintance != 'q' :
     if maintance == 'y' :
         continue;
     elif maintance == 'q' :
-        print("Histogram\nProgress = ",count_progress,"\nTrailer : ",count_trailer,"\nRetriever = ",count_retriever,"\nExcluded : ",count_excluded)
+        print('')
+        print("-----------------------------------------------------------------")
+        print("Histogram\nProgress = ",count_progress,"\nTrailer : ",count_trailer,"\nRetriever = ",count_retriever,"\nExcluded : ",count_excluded"\n\n",student_count,"outcomes in total")
+        print("-----------------------------------------------------------------")
         break;
         
