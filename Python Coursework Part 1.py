@@ -51,8 +51,20 @@ while maintance == 'y' and maintance != 'q' :
     elif maintance == 'q' :
         print('')
         print("-----------------------------------------------------------------")
-        print("Histogram\n")
-        print("Histogram\nProgress = ",count_progress,"\nTrailer : ",count_trailer,"\nRetriever = ",count_retriever,"\nExcluded : ",count_excluded,"\n""\n",student_count,"outcomes in total")
-        print("-----------------------------------------------------------------")
+        print("Histogram")
+        # print("Histogram\nProgress = ",count_progress, for x in ()"\nTrailer : ",count_trailer,"\nRetriever = ",count_retriever,"\nExcluded : ",count_excluded,"\n""\n",student_count,"outcomes in total")
+        print("Progress ",count_progress," : " ,end ='')
+        for asterik_pro in range (0, count_progress):
+            print("*" ,end ='')
+        print("\nTrailer ",count_trailer," : ",end='')
+        for asterik_tra in range(0,count_trailer):
+            print("*",end='')
+        print("\nRetriever ",count_retriever," : ",end='')
+        for asterik_ret in range (0,count_retriever):
+            print("*",end='')
+        print("\nExcluded ",count_excluded," : ",end='')
+        for asterik_exc in range (0,count_excluded):
+            print("*",end='')
+        print("\n""\n",student_count,"outcomes in total\n-----------------------------------------------------------------")
         break;
         
