@@ -7,44 +7,35 @@ while maintance == 'y' and maintance != 'q' :
     try :
         c_pass = int(input("Please enter your credit at pass : "))
         if c_pass in (0, 20, 40, 60, 80, 100, 120):
-            None
-        else :
-            print("Out of Range")
-            break;
-            
-        c_defer = int(input("Please enter your credit at defer : "))
-        if c_defer in (0, 20, 40, 60, 80, 100, 120):
-            None
+            c_defer = int(input("Please enter your credit at defer : "))
+            if c_defer in (0, 20, 40, 60, 80, 100, 120):
+                c_fail = int(input("Please enter your credit at fail : "))
+                if c_fail in (0, 20, 40, 60, 80, 100, 120):
+                    if c_pass + c_defer + c_fail != 120:
+                        print("Total Incorrect") 
+                    else :
+                        if c_pass == 120 and c_defer == c_fail == 0:
+                            print("Progress")
+                            count_progress = count_progress + 1
+                        elif c_pass == 100 and c_defer in(0, 20) and c_fail in (0, 20):
+                            print("Progress (module trailer)")
+                            count_trailer = count_trailer + 1
+                        elif c_pass in (0, 20, 40) and c_defer in (0, 20, 40) and c_fail in (80, 100, 120) :
+                            print("Exclude")
+                            count_excluded = count_excluded + 1
+                        else :
+                            print("Do not progress - module retriever")
+                            count_retriever = count_retriever + 1
+                        student_count = student_count + 1
+                        maintance = input("Enter 'y' to continue or 'q' to quit and view results : ")                                   
+                else :
+                    print("Out of Range")
+            else:
+                print("Out of Range")
         else:
             print("Out of Range")
-            break;
-        c_fail = int(input("Please enter your credit at fail : "))
-        if c_fail in (0, 20, 40, 60, 80, 100, 120):
-            None
-        else:
-            print("Out of Range")
-            break;
-        if c_pass + c_defer + c_fail != 120:
-            print("Total Incorrect")
-            break; 
-        else:
-            None
-        if c_pass == 120 and c_defer == c_fail == 0:
-            print("Progress")
-            count_progress = count_progress + 1
-        elif c_pass == 100 and c_defer in(0, 20) and c_fail in (0, 20):
-            print("Progress (module trailer)")
-            count_trailer = count_trailer + 1
-        elif c_pass in (0, 20, 40) and c_defer in (0, 20, 40) and c_fail in (80, 100, 120) :
-            print("Exclude")
-            count_excluded = count_excluded + 1
-        else :
-            print("Do not progress - module retriever")
-            count_retriever = count_retriever + 1
-        student_count = student_count + 1
     except ValueError:
         print("Integer required")
-    maintance = input("Enter 'y' to continue or 'q' to quit and view results : ")
 #prediction starts here
     if maintance == 'y' :
         continue;
