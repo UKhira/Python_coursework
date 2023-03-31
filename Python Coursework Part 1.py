@@ -2,15 +2,16 @@ maintance = 'y'
 c_pass = c_fail = c_defer = 0
 count_progress = count_trailer = count_retriever = count_excluded = 0
 student_count = 0
+results_range = (0, 20, 40, 60, 80, 100, 120)
 while maintance == 'y' and maintance != 'q' :
 # check credit(pass,defer,fail) and verify entered value is an integer
     try :
         c_pass = int(input("Please enter your credit at pass : "))
-        if c_pass in (0, 20, 40, 60, 80, 100, 120):
+        if c_pass in results_range:
             c_defer = int(input("Please enter your credit at defer : "))
-            if c_defer in (0, 20, 40, 60, 80, 100, 120):
+            if c_defer in results_range:
                 c_fail = int(input("Please enter your credit at fail : "))
-                if c_fail in (0, 20, 40, 60, 80, 100, 120):
+                if c_fail in results_range:
                     if c_pass + c_defer + c_fail != 120:
                         print("Total Incorrect") 
                     else :
