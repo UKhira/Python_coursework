@@ -1,8 +1,14 @@
+#Part 1 - Main Version
 maintance = 'y'
 c_pass = c_fail = c_defer = 0
 count_progress = count_trailer = count_retriever = count_excluded = 0
 student_count = 0
 results_range = (0, 20, 40, 60, 80, 100, 120)
+iter_1 = iter_2 = iter_3 = iter_4 = 0
+l_excluded = []
+l_retriever = []
+l_module = []
+l_progress = []
 while maintance == 'y' and maintance != 'q' :
 # check credit(pass,defer,fail) and verify entered value is an integer
     try :
@@ -17,15 +23,19 @@ while maintance == 'y' and maintance != 'q' :
                     else :
                         if c_pass == 120 and c_defer == c_fail == 0:
                             print("Progress")
+                            l_progress.extend([c_pass,c_defer,c_fail])
                             count_progress = count_progress + 1
                         elif c_pass == 100 and c_defer in(0, 20) and c_fail in (0, 20):
                             print("Progress (module trailer)")
+                            l_module.extend([c_pass,c_defer,c_fail])
                             count_trailer = count_trailer + 1
                         elif c_pass in (0, 20, 40) and c_defer in (0, 20, 40) and c_fail in (80, 100, 120) :
                             print("Exclude")
+                            l_excluded.extend([c_pass,c_defer,c_fail])
                             count_excluded = count_excluded + 1
                         else :
                             print("Do not progress - module retriever")
+                            l_retriever.extend([c_pass,c_defer,c_fail])
                             count_retriever = count_retriever + 1
                         student_count = student_count + 1
                         maintance = input("Enter 'y' to continue or 'q' to quit and view results : ")                                   
@@ -58,7 +68,6 @@ while maintance == 'y' and maintance != 'q' :
         for asterik_exc in range (0,count_excluded):
             print("*",end='')
         print("\n""\n",student_count,"outcomes in total\n-----------------------------------------------------------------")
-        break;
     
     
 #This part was made for to test and adjust spacing   
@@ -73,3 +82,20 @@ while maintance == 'y' and maintance != 'q' :
 # Trailer   2  : **
 # Retriever 0  :
 # Excluded  0  :
+
+#Part 2 - Lists (extensions)
+# Newly added lines in above - 7,8,9,10,11,26,30,34,38
+        print("\n""\n")
+        while iter_1 < len(l_progress):
+            print("Progress - ",l_progress[iter_1:iter_1+3])
+            iter_1 = iter_1 + 3
+        while iter_2 < len(l_module):
+            print("Module Trailer - ",l_module[iter_2:iter_2+3])
+            iter_2 = iter_2 + 3
+        while iter_3 < len(l_retriever):
+            print("Module Retriever - ",l_retriever[iter_3:iter_3+3])
+            iter_3 = iter_3 + 3
+        while iter_4 < len(l_excluded):
+            print("Exclude - ",l_excluded[iter_4:iter_4+3])
+            iter_4 = iter_4 + 3
+        break;
