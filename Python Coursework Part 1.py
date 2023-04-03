@@ -85,7 +85,7 @@ while maintance == 'y' and maintance != 'q' :
 
 #Part 2 - Lists (extensions)
 # Newly added lines in above - 7,8,9,10,11,26,30,34,38
-        print("\n""\n")
+        print("\nPart 2\n")
         while iter_1 < len(l_progress):
             print("Progress - ",l_progress[iter_1:iter_1+3])
             iter_1 = iter_1 + 3
