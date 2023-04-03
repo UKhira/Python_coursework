@@ -86,16 +86,24 @@ while maintance == 'y' and maintance != 'q' :
 #Part 2 - Lists (extensions)
 # Newly added lines in above - 7,8,9,10,11,26,30,34,38
         print("\nPart 2\n")
-        while iter_1 < len(l_progress):
-            print("Progress - ",l_progress[iter_1:iter_1+3])
+        while iter_1 < len(l_progress):          
+            print("\nProgress - ", end = ' ')
+            for count_list in (l_progress[iter_1:iter_1+3]) :
+                print(count_list, end=', ')
             iter_1 = iter_1 + 3
         while iter_2 < len(l_module):
-            print("Module Trailer - ",l_module[iter_2:iter_2+3])
+            print("\nModule trailer - ", end =' ')
+            for count_list in (l_module[iter_2:iter_2+3]) :
+                print(count_list, end=', ')
             iter_2 = iter_2 + 3
         while iter_3 < len(l_retriever):
-            print("Module Retriever - ",l_retriever[iter_3:iter_3+3])
+            print("\nModule retriever - ", end = ' ')
+            for count_list in (l_retriever[iter_3:iter_3+3]) :
+                print(count_list, end=', ')
             iter_3 = iter_3 + 3
         while iter_4 < len(l_excluded):
-            print("Exclude - ",l_excluded[iter_4:iter_4+3])
+            print("\nExclude - ", end = ' ')
+            for count_list in (l_excluded[iter_4:iter_4+3]) :
+                print(count_list, end=', ')
             iter_4 = iter_4 + 3
         break;
