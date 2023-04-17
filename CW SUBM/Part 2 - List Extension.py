@@ -4,7 +4,6 @@ defer_credit = 0
 fail_credit = 0
 pass_credit = 0
 maintance = 'y'
-student_count = 0
 results_range = (0, 20, 40, 60, 80, 100, 120)
 iter_1 = iter_2 = iter_3 = iter_4 = 0
 list_excluded = []
@@ -86,7 +85,6 @@ while maintance == 'y' and maintance != 'q' :
         else:
             retriever_add_mark();
               
-        student_count = student_count + 1
         maintance = input("Enter 'y' to continue or 'q' to quit and view results : ")      
         
     except ValueError:

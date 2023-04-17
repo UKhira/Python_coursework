@@ -7,7 +7,6 @@ maintance = 'y'
 count_progress = count_trailer = count_retriever = count_excluded = 0
 student_count = 0
 results_range = (0, 20, 40, 60, 80, 100, 120)
-iter_1 = iter_2 = iter_3 = iter_4 = 0
 
 def credit_pass_input():
     global pass_credit, results_range
