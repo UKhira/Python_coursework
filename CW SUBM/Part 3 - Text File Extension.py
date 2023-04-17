@@ -43,19 +43,23 @@ def total_check():
 
 
 def progress_add_mark():
+    print("Progress")
     file.write("%s = %s\n" %("Progress " ,credit_store))
     
         
 
 def trailer_add_mark():
+    print("Progress (module trailer)")
     file.write("%s = %s\n" %("Progress (module trailer) ",credit_store))
             
 
 def exclude_add_mark():
+    print("Exclude")
     file.write("%s = %s\n" %("Exclude ",credit_store))
                 
 
 def retriever_add_mark():
+    print("Do not Progress - module retrievever")
     file.write("%s = %s\n" %("Do not progress - module retriever ",credit_store))      
         
 while maintance == 'y' and maintance != 'q' :
