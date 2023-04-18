@@ -5,6 +5,10 @@ pass_credit = 0
 maintance = 'y'
 results_range = (0, 20, 40, 60, 80, 100, 120)
 
+def Purpose_of_Program():
+    '''This is a program created to predict progression outcomes at the end of each academic year in a certain University  
+    And this is its Third Part with Text File as extension'''
+
 file = open("credit.txt", 'w+')
 
 def credit_pass_input():
@@ -60,7 +64,9 @@ def exclude_add_mark():
 
 def retriever_add_mark():
     print("Do not Progress - module retrievever")
-    file.write("%s = %s\n" %("Do not progress - module retriever ",credit_store))      
+    file.write("%s = %s\n" %("Do not progress - module retriever ",credit_store))   
+
+help(Purpose_of_Program)   
         
 while maintance == 'y' and maintance != 'q' :
 # check credit(pass,defer,fail) and verify entered value is an integer

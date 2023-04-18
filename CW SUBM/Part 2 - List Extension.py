@@ -11,6 +11,10 @@ list_retriever = []
 list_module = []
 list_progress = []
 
+def Purpose_of_Program():
+    '''This is a program created to predict progression outcomes at the end of each academic year in a certain University  
+    And this is its 2nd Part with List as extension'''
+
 def credit_pass_input():
     global pass_credit, results_range
     pass_credit = int(input("Please enter your credit at pass : "))
@@ -63,7 +67,9 @@ def exclude_add_mark():
 
 def retriever_add_mark():
     print("Do not progress - module retriever")
-    list_retriever.extend([pass_credit,',',defer_credit,',',fail_credit])        
+    list_retriever.extend([pass_credit,',',defer_credit,',',fail_credit])  
+
+help(Purpose_of_Program)
         
 while maintance == 'y' and maintance != 'q' :
 # check credit(pass,defer,fail) and verify entered value is an integer

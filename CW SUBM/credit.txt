@@ -1,3 +1,4 @@
 Exclude  = (0, 0, 120)
-Do not progress - module retriever  = (0, 60, 60)
-Do not progress - module retriever  = (60, 60, 0)
+Exclude  = (0, 0, 120)
+Progress  = (120, 0, 0)
+Do not progress - module retriever  = (60, 0, 60)

@@ -8,6 +8,10 @@ count_progress = count_trailer = count_retriever = count_excluded = 0
 student_count = 0
 results_range = (0, 20, 40, 60, 80, 100, 120)
 
+def Purpose_of_Program():
+    '''This is a program created to predict progression outcomes at the end of each academic year in a certain University  
+    And this is its Main Part with Histogram'''
+
 def credit_pass_input():
     global pass_credit, results_range
     pass_credit = int(input("Please enter your credit at pass : "))
@@ -70,6 +74,7 @@ def retriever_add_mark():
     count_retriever = count_retriever + 1
     return(count_retriever)
         
+help(Purpose_of_Program)
         
 while maintance == 'y' and maintance != 'q' :
 # check credit(pass,defer,fail) and verify entered value is an integer
