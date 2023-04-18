@@ -5,7 +5,7 @@ pass_credit = 0
 maintance = 'y'
 results_range = (0, 20, 40, 60, 80, 100, 120)
 
-file = open("credit.txt", 'w')
+file = open("credit.txt", 'w+')
 
 def credit_pass_input():
     global pass_credit, results_range
