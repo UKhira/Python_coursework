@@ -48,22 +48,22 @@ def total_check():
 
 def progress_add_mark():
     print("Progress")
-    list_progress.extend([pass_credit,defer_credit,fail_credit])
+    list_progress.extend([pass_credit,',',defer_credit,',',fail_credit])
         
 
 def trailer_add_mark():
     print("Progress (module trailer)")
-    list_module.extend([pass_credit,defer_credit,fail_credit])
+    list_module.extend([pass_credit,',',defer_credit,',',fail_credit])
             
 
 def exclude_add_mark():
     print("Exclude")
-    list_excluded.extend([pass_credit,defer_credit,fail_credit])
+    list_excluded.extend([pass_credit,',',defer_credit,',',fail_credit])
                 
 
 def retriever_add_mark():
     print("Do not progress - module retriever")
-    list_retriever.extend([pass_credit,defer_credit,fail_credit])        
+    list_retriever.extend([pass_credit,',',defer_credit,',',fail_credit])        
         
 while maintance == 'y' and maintance != 'q' :
 # check credit(pass,defer,fail) and verify entered value is an integer
@@ -98,36 +98,28 @@ while maintance == 'y' and maintance != 'q' :
             print("\nPart 2")
 
             while iter_1 < len(list_progress):          
-                print("\nProgress - ", end = ' ')
-                for count_list in (list_progress[iter_1:iter_1+2]) :
-                    print(count_list, end=', ')
-                else:
-                    print(count_list, end=' ')   #for leaving final element without a comma
-                iter_1 = iter_1 + 3
+                print("\nProgress - ", end = '')
+                for count_list in (list_progress[iter_1:iter_1+5]) :
+                    print(count_list, end=' ')
+                iter_1 = iter_1 + 5
 
             while iter_2 < len(list_module):
                 print("\nModule trailer - ", end =' ')
-                for count_list in (list_module[iter_2:iter_2+2]) :
-                    print(count_list, end=', ')
-                else:
+                for count_list in (list_module[iter_2:iter_2+5]) :
                     print(count_list, end=' ')
-                iter_2 = iter_2 + 3
+                iter_2 = iter_2 + 5
 
             while iter_3 < len(list_retriever):
                 print("\nModule retriever - ", end = ' ')
-                for count_list in (list_retriever[iter_3:iter_3+2]) :
-                    print(count_list, end=', ')
-                else:
+                for count_list in (list_retriever[iter_3:iter_3+5]) :
                     print(count_list, end=' ')
-                iter_3 = iter_3 + 3
+                iter_3 = iter_3 + 5
                 
             while iter_4 < len(list_excluded):
                 print("\nExclude - ", end = ' ')
-                for count_list in (list_excluded[iter_4:iter_4+2]) :
-                    print(count_list, end=', ')
-                else:
+                for count_list in (list_excluded[iter_4:iter_4+5]) :
                     print(count_list, end=' ')
-                iter_4 = iter_4 + 3
+                iter_4 = iter_4 + 5
     else :
         print("Invalid Input Try Again") 
         break;
