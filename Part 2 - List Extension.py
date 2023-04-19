@@ -20,7 +20,7 @@ def credit_pass_input():                #let user to input credit at pass, verif
     pass_credit = int(input("Please enter your credit at pass : "))
     while pass_credit not in (results_range):
         print("Out of Range")
-        pass_credit = int(input("Please enter your credit at pass : "))
+        pass_credit = int(input("Please enter your credit at pass : "))     #if it isn't within range prompt till user input valid range
     return pass_credit
         
         
